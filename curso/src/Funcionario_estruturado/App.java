@@ -2,7 +2,7 @@ package Funcionario_estruturado;
 import java.time.YearMonth;
 import java.util.Scanner;
 
-public class main {
+public class App {
     public static void main(String[] args) {  
 
         String nome;
