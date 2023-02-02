@@ -13,17 +13,13 @@ public class App {
 
         Scanner input = new Scanner(System.in);
         
-        System.out.println("Digite o nome:");
-        nome = input.nextLine();
-        System.out.println("Digite o cpf:");
-        cpf = input.nextLine();
-        System.out.println("Digite o ano admissao:");
-        anoAdmissao = input.nextInt();
-        System.out.println("Digite o salário:");
-        salario = input.nextDouble();
+        nome = "fulano";
+        cpf = "12345678910";
+        anoAdmissao =  2020;
+        salario = 20500.99;
 
         Funcionario pessoa1 = new Funcionario();
-        pessoa1.cadastrarFuncionario(nome,cpf,anoAdmissao,salario);
+        pessoa1.cadastrarFuncionario(nome, cpf, anoAdmissao, salario);
         pessoa1.visualizarFuncionario();
         pessoa1.calcularAjusteSalario();
         pessoa1.calcularTempoEmpresa();
