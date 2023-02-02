@@ -33,12 +33,5 @@ public class App {
         System.out.println("Informe a disciplina:");
         String disciplina = input.nextLine();
         fulano.inserirDisciplina(disciplina);
-
-
-
     }
-
-        
-    
 }
-7777
