@@ -18,20 +18,9 @@ public class App {
         anoAdmissao =  2020;
         salario = 20500.99;
 
-        Funcionario pessoa1 = new Funcionario();
-        pessoa1.cadastrarFuncionario(nome, cpf, anoAdmissao, salario);
-        pessoa1.visualizarFuncionario();
-        pessoa1.calcularAjusteSalario();
-        pessoa1.calcularTempoEmpresa();
-
-        Funcionario pessoa2 = new Funcionario();
-
-        Professor fulano = new Professor();
-
-        fulano.cadastrarFuncionario(nome, cpf, anoAdmissao, salario);
+        Funcionario pessoa1 = new Funcionario(nome, cpf, anoAdmissao, salario);
+        Professor fulano = new Professor(nome,cpf,anoAdmissao,salario);
         fulano.visualizarFuncionario();
-        System.out.println("Informe a disciplina:");
-        String disciplina = input.nextLine();
-        fulano.inserirDisciplina(disciplina);
+        fulano.inserirDisciplina("Matemática");
     }
 }

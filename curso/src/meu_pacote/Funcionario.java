@@ -13,11 +13,24 @@ public class Funcionario{
 
     private Scanner input = new Scanner(System.in);
 
-    Funcionario(String nome, String cpf, int anoAdmissao, double salario){
+    public Funcionario(String nome, String cpf, int anoAdmissao, double salario){
         this.nome = nome;    
         this.cpf = cpf;
         this.anoAdmissao = anoAdmissao;
         this.salario = salario;
+    }
+    public double getSalario() {
+        return this.salario;
+    }
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public String getCnpj() {
+        return cnpj;
+    }
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
     }
     //métodos
     public void setNome(String nome){
@@ -33,7 +46,7 @@ public class Funcionario{
         this.cpf = cpf;
         this.anoAdmissao = anoAdmissao;
         this.salario = salario;
-        this.cnpj = cnpj;
+        this.setCnpj(cnpj);
     }
     public void cadastrarFuncionario(String nome, String cpf,int anoAdmissao, double salario){
         this.nome = nome;    
@@ -46,6 +59,10 @@ public class Funcionario{
         double percentual = input.nextDouble();
         this.salario = this.salario + (this.salario * percentual);
     }
+    public void calcularAjusteSalario(double percentual){
+        setSalario(getSalario() + (getSalario() * percentual));
+    }
+
     public void calcularTempoEmpresa(){
         int anoAtual = YearMonth.now().getYear();
         int tempoEmpressa = anoAtual - this.anoAdmissao;

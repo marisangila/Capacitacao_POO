@@ -2,9 +2,8 @@ package meu_pacote;
 
 public class Professor extends Funcionario{
     
-    Professor(String nome, String cpf, int anoAdmissao, double salario) {
+    public Professor(String nome, String cpf, int anoAdmissao, double salario) {
         super(nome, cpf, anoAdmissao, salario);
-        //TODO Auto-generated constructor stub
     }
     private String formacao;
     private String disciplina;
@@ -12,7 +11,7 @@ public class Professor extends Funcionario{
 
 
     public void inserirFormacao(String formacao){
-        this.formacao = formacao
+        this.formacao = formacao;
     }
     public void alterarFormacao(String novaFormacao){
         this.formacao = novaFormacao;
