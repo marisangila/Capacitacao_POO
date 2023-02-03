@@ -1,6 +1,8 @@
 package meu_pacote;
 
 import java.util.Scanner;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.time.YearMonth;
 
 public class Funcionario{
@@ -40,7 +42,7 @@ public class Funcionario{
     public String getNome(){
         return this.nome;
     }
-
+    /* 
     public void cadastrarFuncionario(String nome, String cpf,int anoAdmissao, double salario, String cnpj){
         this.nome = nome;    
         this.cpf = cpf;
@@ -53,7 +55,7 @@ public class Funcionario{
         this.cpf = cpf;
         this.anoAdmissao = anoAdmissao;
         this.salario = salario;
-    }
+    }*/
     public void calcularAjusteSalario(){
         System.out.println("Digite o percentual do aumento:");
         double percentual = input.nextDouble();
@@ -69,10 +71,28 @@ public class Funcionario{
         System.out.println("O tempo de empresa é:"+tempoEmpressa);
     }
     public void visualizarFuncionario(){
-        System.out.println("Dados cadastrados");
+        System.out.println("Dados do Funcionário");
         System.out.println("nome:"+nome);
         System.out.println("cpf:"+cpf);
         System.out.println("ano admissao:"+anoAdmissao);
         System.out.println("salario:"+salario);
+    }
+    public void inserirFuncionario(String nome, String cpf, int anoAdmissao, double salario){
+        Conexao conexao = new Conexao();
+        try {
+            Statement stmt = conexao.createStatement();
+            String sql = "INSERT INTO funcionario (nome,cpf_,anoAdmissao,salario) VALUES('')";
+            stmt.executeUpdate(sql);
+        } catch (SQLException e) {
+        }
+    }
+    public void inserirFuncionario(String nome, String cpf, String cnpj, int anoAdmissao, double salario){
+        Conexao conexao = new Conexao();
+        try {
+            Statement stmt = conexao.createStatement();
+            String sql = "INSERT INTO funcionario (nome,cpf_,anoAdmissao,salario) VALUES('')";
+            stmt.executeUpdate(sql);
+        } catch (SQLException e) {
+        }
     }
 }

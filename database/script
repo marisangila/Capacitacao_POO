@@ -1,0 +1,12 @@
+CREATE DATABASE poo;
+
+USE poo;
+
+CREATE TABLE `poo`.`funcionario` (
+  `pk_funcionario` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
+  `cpf` VARCHAR(11) NOT NULL,
+  `cnpj` VARCHAR(14) NULL,
+  `anoAdmissao` INT NOT NULL,
+  `salario` DOUBLE NOT NULL,
+  PRIMARY KEY (`pk_funcionario`));
