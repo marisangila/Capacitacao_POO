@@ -1,26 +1,21 @@
 package Funcionario_oo;
 
-import java.util.Scanner;
-import meu_pacote.*;
+import meu_pacote.Func;
 
 public class App {
     public static void main(String[] args) {  
 
-        String nome;
-        String cpf;
-        int anoAdmissao;
-        double salario;
+        Func fulana = new Func("mari", 1001, "19/05/0000");
+        fulana.calcularSalario(1000.00, 500.00);
+        fulana.calcularSalario(1000.00);
+        System.out.println(fulana.getSalario());
+        fulana.falarAlgumaCoisa();
+        fulana.falar();
 
-        Scanner input = new Scanner(System.in);
-        
-        nome = "fulano";
-        cpf = "12345678910";
-        anoAdmissao =  2020;
-        salario = 20500.99;
+        //Erro.exibeErro();
+        //String x = Erro.mensagem;
 
-        Funcionario pessoa1 = new Funcionario(nome, cpf, anoAdmissao, salario);
-        Professor fulano = new Professor(nome,cpf,anoAdmissao,salario);
-        fulano.visualizarFuncionario();
-        fulano.inserirDisciplina("Matemática");
+        fulana.inserirFuncionario();
+
     }
 }

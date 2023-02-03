@@ -1,0 +1,10 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\professor.SN-357571\\Downloads\\mysql-connector-j-8.0.32\\mysql-connector-j-8.0.32\\mysql-connector-j-8.0.32.jar"
+    ],
+    "java.project.sourcePaths": [
+        "curso\\src"
+    ],
+    "java.project.outputPath": "curso\\bin\\Funcionario_oo"
+}
